@@ -1,4 +1,4 @@
-module fumamatar/urlExtract
+module github.com/fumamatar/urlExtract
 
 go 1.16
 
