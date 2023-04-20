@@ -2,7 +2,7 @@
 
 Recursively extract urls from a web page for reconnaissance. Requires Go>=1.16.
 
-Install using `go get github.com/fumamatar/urlExtract` or download one of the executables under [releases](https://github.com/fumamatar/LinkExtract/releases).
+Install using `go install github.com/eversinc33/urlExtract@latest` or download one of the executables under [releases](https://github.com/eversinc33/LinkExtract/releases).
 
 ```
 Usage: linkExtract (flags) [target_url]
