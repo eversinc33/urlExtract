@@ -1,4 +1,4 @@
-module github.com/eversinc33/urlExtract
+module github.com/segurancadecomputadores/urlExtract
 
 go 1.16
 
