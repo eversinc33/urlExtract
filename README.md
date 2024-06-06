@@ -2,7 +2,7 @@
 
 Recursively extract urls from a web page for reconnaissance. Requires Go>=1.16.
 
-Install using `go install github.com/segurancadecomputadores/urlExtract@latest`
+Install using `go install github.com/eversinc33/urlExtract@latest`
 ```
 Usage: linkExtract (flags) [target_url]
   -b string
