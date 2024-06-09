@@ -13,6 +13,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"crypto/tls"
 
 	"github.com/PuerkitoBio/goquery"
 	strip "github.com/grokify/html-strip-tags-go"
@@ -206,11 +207,15 @@ func main() {
 	url_no_prefix = u.Host + u.Path
 	host_url = u.Scheme + "://" + u.Host
 
-	// setup httpclient
-	client := &http.Client{
-		Timeout: 30 * time.Second,
-		Jar:     createCookieJarFromString(*cookieString),
-	}
+	tr := &http.Transport{
+        TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+        }
+        // setup httpclient
+        client := &http.Client{
+                Timeout: 30 * time.Second,
+                Jar:     createCookieJarFromString(*cookieString),
+                Transport: tr,
+        }
 
 	// crawl
 	wg.Add(1)
